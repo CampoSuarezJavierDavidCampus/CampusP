@@ -1,0 +1,37 @@
+
+/*=============================================
+=            SOPORTE                          =
+=============================================*/
+
+.campusLand-soporte{
+    padding: 2rem .5rem;
+
+    &__title{
+        margin: 0;
+    }
+
+    &__mesage{
+        
+
+        &-question{
+            display: block;
+            padding: 1rem .5rem;            
+        }
+
+        &:hover &-answer{                 
+            padding: 1rem .5rem 2rem .5rem;
+            height: auto;
+        }
+
+        &-answer{                        
+            display: block;
+            height: 0;
+            overflow-y: hidden;
+            transition-property: all;
+            transition-duration: 2s;
+        }
+    }
+}
+
+/*=====  End of SOPORTE  ======*/
+

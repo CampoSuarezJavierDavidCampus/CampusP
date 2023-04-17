@@ -1,0 +1,234 @@
+
+/*----------  TYPOGRAPHY  ----------*/
+
+
+.campusLand-card{
+    border-radius: .8rem;
+    &__title{
+        font-size: clamp(.5rem, calc(1rem + 0.5vw) , 1.5rem );
+        text-transform: capitalize;
+        font-weight: normal;
+        text-align: center;
+    }
+
+    &__img{
+        border: .3rem solid var(--campusLand-white);
+        border-radius: .4rem;
+    }
+    
+}
+
+.campusLand-form{
+    &__checkbox-link, &__add-link{
+        text-transform: capitalize;
+        border: none;
+        font-size: 1.5rem;
+        border-radius: 1rem;
+        color: var(--campusLand-white);            
+        &:hover{
+            outline: var(--campusLand-white) solid .2rem;
+            box-shadow: inset 0px 0px 8px .5px rgba(255,255,255,1);
+        }
+    }        
+    &__add-link:hover{
+        color: var(--campusLand-purple);   
+    }
+}
+
+.campusLand-modal{ 
+    border-radius: 2rem;
+    &__table{
+        border-collapse: collapse;
+        border-radius: 1rem;
+        box-shadow:  1px 8px 16px 2px #0004;
+        &-collumn, &-cell{
+            text-align: center;  
+        }
+        &-cell{
+            font-size: clamp(.5rem, calc(1rem + 0.5vw) , 1.5rem );
+        }
+        &-collumn{                   
+            text-transform: capitalize;   
+            font-size: clamp(1.2rem, calc(1rem + 0.5vw) , 3rem );
+        }
+    }
+    
+}
+
+/*=============================================
+=            HEADER                           =
+=============================================*/
+
+.campusLand-header{
+    &__navbar{
+        &-link{
+            color: var(--campusLand-black);
+            text-align: center;            
+            text-decoration: none;
+            border-radius: 0.5rem;
+            border: var(--campusLand-white) solid .1rem;
+            color: var(--campusLand-white);
+            text-transform: capitalize;
+            font-weight: 700;
+            vertical-align: super;
+            &:hover{                
+                color: var(--campusLand-white);
+            }
+        }        
+    }
+    &__form{
+        &-checkbox-label{
+            font-size: clamp(1.5rem, calc(1rem + 0.5vw) , 3rem );
+            border: .3rem solid var(--campusLand-white);
+            color: var(--campusLand-white);            
+            &:hover{                
+                background: #fff4;
+            }
+        }
+    }
+}
+
+/*=====  End of HEADER  ======*/
+
+
+
+
+
+/*=============================================
+=            FOOTER                           =
+=============================================*/
+
+.campusLand-footer{    
+    &__contactos{
+        list-style: none;  
+        border-radius: .5rem;
+        border: .2rem solid var(--campusLand-white);
+        &-item{            
+            &-title{
+                font-family: bold;
+                font-size: clamp(2rem, calc(1rem + 1vw) , 3.6rem );
+                
+                color: white;
+                text-transform: capitalize;
+            }
+
+            &-link{
+                text-decoration: none;
+                font-weight: bold;
+                font-size: clamp(.5rem, calc(1rem + 0.5vw) , 2rem );
+                
+            }
+
+        }
+    }
+}
+
+/*=====  End of FOOTER  ======*/
+
+
+
+
+
+/*=============================================
+=            HOME                             =
+=============================================*/
+
+.campusLand-home{
+    text-align: center;
+    &__bienvenida{
+
+        &-title{
+            font-size: clamp(2rem, calc(3rem + 2vw), 5rem);
+        }   
+        &-small{
+            color: #0008;
+            font-size:clamp(.5rem, calc(.8rem + 1vw), 2rem) ;
+        }
+    }
+
+    &__description{
+        &-title{
+            font-size:clamp(1.6rem, calc(1.8rem + 1vw), 3.5rem) ;            
+        }
+
+        &-mesage{
+            font-size:clamp(.8rem, calc(.8rem + 1vw), 2rem) ;
+        }
+    }
+     
+}
+
+/*=====  End of HOME  ======*/
+
+
+
+
+
+
+/*=============================================
+=            SERVICES AND CAFETERIA           =
+=============================================*/
+
+.campusLand-services, .campusLand-cafeteria{
+    &__section{
+        text-transform: capitalize;
+        text-align: center;
+        &-title{
+            font-size: clamp(2.5rem, calc(3rem + 1vw) , 5rem );
+        }
+
+        &--sub{
+            font-size:clamp(2rem, calc(2rem + 1vw), 3rem) ;
+        }
+
+        &-link, &-small{
+            font-size:clamp(.7rem, calc(.7rem + 1vw), 1.8rem) ;
+            text-align: center;
+        }
+
+        &-link{            
+            color: var(--campusLand-white);
+            &:hover{
+                text-decoration: underline;
+                cursor: pointer;
+            }
+        }
+    }    
+}
+
+/*=====  End of SERVICES AND CAFETERIA  ======*/
+
+
+
+
+
+/*=============================================
+=            SOPORTE                          =
+=============================================*/
+
+.campusLand-soporte{
+    border-radius: .5rem;   
+
+    &__title{
+        font-size: clamp(2.5rem, calc(3rem + 1vw) , 5rem );
+    }
+
+    &__mesage{
+        &-question{           
+            border-radius: 1rem 1rem 0 0;
+            border-bottom: .4rem solid var(--campusLand-purple); 
+            text-align: center;
+        }        
+
+        &-answer{
+            box-shadow: 0 15px 20px 2px #0003;
+        }
+    }
+}
+
+/*=====  End of SOPORTE  ======*/
+
+
+
+
+

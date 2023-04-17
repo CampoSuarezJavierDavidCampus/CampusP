@@ -1,0 +1,32 @@
+
+/*=============================================
+=            SERVICES AND CAFETERIA           =
+=============================================*/
+
+.campusLand-services, .campusLand-cafeteria{    
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__section *{display: block} 
+        
+}
+
+.campusLand-cafeteria{
+    &__section--sub{
+        align-self: flex-start;
+        margin: 0;
+    }
+
+    .campusLand-card__title{
+            order: 5;        
+    }
+    .campusLand-form__add-link{
+        order: 10;
+    }
+    
+}
+
+/*=====  End of SERVICES AND CAFETERIA  ======*/
+

@@ -1,0 +1,94 @@
+
+/*----------  COLORS  ----------*/
+
+.campusLand-card{
+    background: var(--campusLand-purple-light);    
+}
+
+.campusLand-modal{
+    background: #0008;
+    &__table{
+        &-thead{
+            background: var(--campusLand-purple-light);
+        }
+    }  
+    &__content, &__footer{        
+        background: var(--campusLand-white);
+    } 
+}
+
+.campusLand-form{
+    &__checkbox-link, &__add-link {
+        background: var(--campusLand-purple);
+    }    
+    &__add-link:hover{
+        background: var(--campusLand-white);
+    }
+}
+
+/*=============================================
+=            HEADER                           =
+=============================================*/
+
+.campusLand-header{
+    background-image:url("../images/fondo.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    &__navbar{
+        
+        &-link{                        
+            &:hover{
+                background-color:var(--campusLand-purple);                
+            }
+        }
+    }
+
+    &__offcanvas{
+        background-image:url("../images/fondo.jpg");       
+    }
+}
+
+/*=====  End of HEADER  ======*/
+
+
+
+
+
+/*=============================================
+=            FOOTER                           =
+=============================================*/
+
+.campusLand-footer{
+    background: #000;
+    
+    &__contactos{                        
+        background: var(--campusLand-purple);
+        
+    }
+}
+
+/*=====  End of FOOTER  ======*/
+
+
+
+
+
+/*=============================================
+=            SPORTE                           =
+=============================================*/
+
+.campusLand-soporte{
+    background: var(--campusLand-white);   
+    &__mesage{
+        &-question{            
+            background: var(--campusLand-purple-light);   
+        }
+        &-answer{
+            background: var(--campusLand-light);
+        }
+    }
+}
+
+/*=====  End of SPORTE  ======*/
+
+

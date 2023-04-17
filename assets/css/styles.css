@@ -1,0 +1,617 @@
+.campusLand-header {
+  grid-area: header;
+  width: 100vw;
+  height: 5rem;
+}
+.campusLand-header .campusLand-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.campusLand-header #campusLand-header__form-checkbox {
+  display: none;
+}
+#campusLand-header__form-checkbox:checked ~ .campusLand-header__offcanvas {
+  display: flex;
+}
+.campusLand-header__logo {
+  position: relative;
+  width: 10rem;
+  height: 3.5rem;
+}
+.campusLand-header__navbar {
+  width: 40%;
+  display: none;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.campusLand-header__navbar-link {
+  padding: 1rem 3rem;
+}
+.campusLand-header__form-checkbox-label {
+  padding: 1rem;
+}
+.campusLand-header__form-checkbox-label--exit {
+  margin-bottom: 2rem;
+  align-self: self-start;
+}
+.campusLand-header__form-checkbox-label--exit::after {
+  content: "Salir";
+}
+.campusLand-header__offcanvas {
+  width: 100vw;
+  height: 100vh;
+  z-index: 1080;
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  padding-inline: 1rem;
+}
+.campusLand-header__offcanvas .campusLand-header__navbar-link {
+  margin-block: 0.5rem;
+  width: 80%;
+}
+
+/*=============================================
+=            FOOTER                           =
+=============================================*/
+.campusLand-footer {
+  grid-area: footer;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 1rem 0;
+  max-width: 100vw;
+}
+.campusLand-footer .campusLand-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.campusLand-footer__logo {
+  bottom: 0;
+  left: 0;
+  width: clamp(10rem, 15rem + 5vw, 40rem);
+  height: clamp(10rem, 15rem + 5vw, 40rem);
+  animation-name: space;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+.campusLand-footer__contactos {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  row-gap: clamp(0.5rem, 1rem + 0.5vw, 1rem);
+  margin: 2rem 0;
+  width: 100%;
+  padding-inline: 0;
+  width: 90%;
+  padding-block: 1rem;
+}
+.campusLand-footer__contactos-item {
+  height: 1.3rem;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.campusLand-footer__contactos-item-img {
+  width: clamp(2rem, 1rem + 1vw, 4rem);
+  height: clamp(2rem, 1rem + 1vw, 4rem);
+  margin-right: 1rem;
+}
+
+/*=====  End of FOOTER  ======*/
+/*=============================================
+=            HOME                             =
+=============================================*/
+.campusLand-home {
+  text-align: center;
+}
+.campusLand-home__bienvenida > * {
+  display: block;
+}
+.campusLand-home__description-title {
+  margin-top: 1rem;
+  margin-bottom: 0;
+  padding: 0;
+}
+.campusLand-home__description-mesage {
+  margin-top: 0;
+}
+
+/*=====  End of HOME  ======*/
+/*=============================================
+=            SERVICES AND CAFETERIA           =
+=============================================*/
+.campusLand-services, .campusLand-cafeteria {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.campusLand-services__section *, .campusLand-cafeteria__section * {
+  display: block;
+}
+
+.campusLand-cafeteria__section--sub {
+  align-self: flex-start;
+  margin: 0;
+}
+.campusLand-cafeteria .campusLand-card__title {
+  order: 5;
+}
+.campusLand-cafeteria .campusLand-form__add-link {
+  order: 10;
+}
+
+/*=====  End of SERVICES AND CAFETERIA  ======*/
+/*=============================================
+=            SOPORTE                          =
+=============================================*/
+.campusLand-soporte {
+  padding: 2rem 0.5rem;
+}
+.campusLand-soporte__title {
+  margin: 0;
+}
+.campusLand-soporte__mesage-question {
+  display: block;
+  padding: 1rem 0.5rem;
+}
+.campusLand-soporte__mesage:hover .campusLand-soporte__mesage-answer {
+  padding: 1rem 0.5rem 2rem 0.5rem;
+  height: auto;
+}
+.campusLand-soporte__mesage-answer {
+  display: block;
+  height: 0;
+  overflow-y: hidden;
+  transition-property: all;
+  transition-duration: 2s;
+}
+
+/*=====  End of SOPORTE  ======*/
+:root {
+  --campusLand-white: rgb(255, 255, 255);
+  --campusLand-blue-light: rgba(33, 26, 133, 0.838);
+  --campusLand-purple: rgb(90, 94, 224);
+  --campusLand-purple-light: rgba(151, 133, 255, 0.6156862745);
+  --campusLand-black: rgb(0, 0, 0);
+  --campusLand-light: #f8f9fa;
+}
+
+/*----------  COLORS  ----------*/
+.campusLand-card {
+  background: var(--campusLand-purple-light);
+}
+
+.campusLand-modal {
+  background: rgba(0, 0, 0, 0.5333333333);
+}
+.campusLand-modal__table-thead {
+  background: var(--campusLand-purple-light);
+}
+.campusLand-modal__content, .campusLand-modal__footer {
+  background: var(--campusLand-white);
+}
+
+.campusLand-form__checkbox-link, .campusLand-form__add-link {
+  background: var(--campusLand-purple);
+}
+.campusLand-form__add-link:hover {
+  background: var(--campusLand-white);
+}
+
+/*=============================================
+=            HEADER                           =
+=============================================*/
+.campusLand-header {
+  background-image: url("../images/fondo.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.campusLand-header__navbar-link:hover {
+  background-color: var(--campusLand-purple);
+}
+.campusLand-header__offcanvas {
+  background-image: url("../images/fondo.jpg");
+}
+
+/*=====  End of HEADER  ======*/
+/*=============================================
+=            FOOTER                           =
+=============================================*/
+.campusLand-footer {
+  background: #000;
+}
+.campusLand-footer__contactos {
+  background: var(--campusLand-purple);
+}
+
+/*=====  End of FOOTER  ======*/
+/*=============================================
+=            SPORTE                           =
+=============================================*/
+.campusLand-soporte {
+  background: var(--campusLand-white);
+}
+.campusLand-soporte__mesage-question {
+  background: var(--campusLand-purple-light);
+}
+.campusLand-soporte__mesage-answer {
+  background: var(--campusLand-light);
+}
+
+/*=====  End of SPORTE  ======*/
+/*----------  TYPOGRAPHY  ----------*/
+.campusLand-card {
+  border-radius: 0.8rem;
+}
+.campusLand-card__title {
+  font-size: clamp(0.5rem, 1rem + 0.5vw, 1.5rem);
+  text-transform: capitalize;
+  font-weight: normal;
+  text-align: center;
+}
+.campusLand-card__img {
+  border: 0.3rem solid var(--campusLand-white);
+  border-radius: 0.4rem;
+}
+
+.campusLand-form__checkbox-link, .campusLand-form__add-link {
+  text-transform: capitalize;
+  border: none;
+  font-size: 1.5rem;
+  border-radius: 1rem;
+  color: var(--campusLand-white);
+}
+.campusLand-form__checkbox-link:hover, .campusLand-form__add-link:hover {
+  outline: var(--campusLand-white) solid 0.2rem;
+  box-shadow: inset 0px 0px 8px 0.5px rgb(255, 255, 255);
+}
+.campusLand-form__add-link:hover {
+  color: var(--campusLand-purple);
+}
+
+.campusLand-modal {
+  border-radius: 2rem;
+}
+.campusLand-modal__table {
+  border-collapse: collapse;
+  border-radius: 1rem;
+  box-shadow: 1px 8px 16px 2px rgba(0, 0, 0, 0.2666666667);
+}
+.campusLand-modal__table-collumn, .campusLand-modal__table-cell {
+  text-align: center;
+}
+.campusLand-modal__table-cell {
+  font-size: clamp(0.5rem, 1rem + 0.5vw, 1.5rem);
+}
+.campusLand-modal__table-collumn {
+  text-transform: capitalize;
+  font-size: clamp(1.2rem, 1rem + 0.5vw, 3rem);
+}
+
+/*=============================================
+=            HEADER                           =
+=============================================*/
+.campusLand-header__navbar-link {
+  color: var(--campusLand-black);
+  text-align: center;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  border: var(--campusLand-white) solid 0.1rem;
+  color: var(--campusLand-white);
+  text-transform: capitalize;
+  font-weight: 700;
+  vertical-align: super;
+}
+.campusLand-header__navbar-link:hover {
+  color: var(--campusLand-white);
+}
+.campusLand-header__form-checkbox-label {
+  font-size: clamp(1.5rem, 1rem + 0.5vw, 3rem);
+  border: 0.3rem solid var(--campusLand-white);
+  color: var(--campusLand-white);
+}
+.campusLand-header__form-checkbox-label:hover {
+  background: rgba(255, 255, 255, 0.2666666667);
+}
+
+/*=====  End of HEADER  ======*/
+/*=============================================
+=            FOOTER                           =
+=============================================*/
+.campusLand-footer__contactos {
+  list-style: none;
+  border-radius: 0.5rem;
+  border: 0.2rem solid var(--campusLand-white);
+}
+.campusLand-footer__contactos-item-title {
+  font-family: bold;
+  font-size: clamp(2rem, 1rem + 1vw, 3.6rem);
+  color: white;
+  text-transform: capitalize;
+}
+.campusLand-footer__contactos-item-link {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: clamp(0.5rem, 1rem + 0.5vw, 2rem);
+}
+
+/*=====  End of FOOTER  ======*/
+/*=============================================
+=            HOME                             =
+=============================================*/
+.campusLand-home {
+  text-align: center;
+}
+.campusLand-home__bienvenida-title {
+  font-size: clamp(2rem, 3rem + 2vw, 5rem);
+}
+.campusLand-home__bienvenida-small {
+  color: rgba(0, 0, 0, 0.5333333333);
+  font-size: clamp(0.5rem, 0.8rem + 1vw, 2rem);
+}
+.campusLand-home__description-title {
+  font-size: clamp(1.6rem, 1.8rem + 1vw, 3.5rem);
+}
+.campusLand-home__description-mesage {
+  font-size: clamp(0.8rem, 0.8rem + 1vw, 2rem);
+}
+
+/*=====  End of HOME  ======*/
+/*=============================================
+=            SERVICES AND CAFETERIA           =
+=============================================*/
+.campusLand-services__section, .campusLand-cafeteria__section {
+  text-transform: capitalize;
+  text-align: center;
+}
+.campusLand-services__section-title, .campusLand-cafeteria__section-title {
+  font-size: clamp(2.5rem, 3rem + 1vw, 5rem);
+}
+.campusLand-services__section--sub, .campusLand-cafeteria__section--sub {
+  font-size: clamp(2rem, 2rem + 1vw, 3rem);
+}
+.campusLand-services__section-link, .campusLand-services__section-small, .campusLand-cafeteria__section-link, .campusLand-cafeteria__section-small {
+  font-size: clamp(0.7rem, 0.7rem + 1vw, 1.8rem);
+  text-align: center;
+}
+.campusLand-services__section-link, .campusLand-cafeteria__section-link {
+  color: var(--campusLand-white);
+}
+.campusLand-services__section-link:hover, .campusLand-cafeteria__section-link:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/*=====  End of SERVICES AND CAFETERIA  ======*/
+/*=============================================
+=            SOPORTE                          =
+=============================================*/
+.campusLand-soporte {
+  border-radius: 0.5rem;
+}
+.campusLand-soporte__title {
+  font-size: clamp(2.5rem, 3rem + 1vw, 5rem);
+}
+.campusLand-soporte__mesage-question {
+  border-radius: 1rem 1rem 0 0;
+  border-bottom: 0.4rem solid var(--campusLand-purple);
+  text-align: center;
+}
+.campusLand-soporte__mesage-answer {
+  box-shadow: 0 15px 20px 2px rgba(0, 0, 0, 0.2);
+}
+
+/*=====  End of SOPORTE  ======*/
+/*----------  ANIMATIONS  ----------*/
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes space {
+  0% {
+    transform: translateY(0.8rem);
+    transform: translateX(0.5rem);
+  }
+  25% {
+    transform: translateX(-0.5rem);
+    transform: translateY(-0.8rem);
+    transform: rotate(2deg);
+  }
+  50% {
+    transform: translateX(0.5rem);
+    transform: translateY(0.8rem);
+  }
+  80% {
+    transform: rotate(-2deg);
+  }
+  100% {
+    transform: translateY(0rem);
+    transform: translateX(0rem);
+  }
+}
+/*----------  GLOBALS  ----------*/
+*, *::after, *::before {
+  box-sizing: inherit;
+}
+
+body {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-areas: "header header" "main  main " "main  main " "footer  footer";
+  width: 100vw;
+  overflow-x: hidden;
+  grid-template-rows: auto repeat(2, minmax(auto, 1fr)) auto;
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  animation: 0.25s ease-out 0s 1 fadeInAnimation;
+  background: var(--campusLand-white);
+  background: linear-gradient(0deg, var(--campusLand-white) 0%, var(--campusLand-blue-light) 100%);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.campusLand-container {
+  width: 100%;
+  height: 100%;
+  display: block;
+  margin-inline: auto;
+  position: relative;
+}
+.campusLand-container--primary {
+  padding-block: 4rem;
+  grid-area: main;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.campusLand-card {
+  height: 23rem;
+  display: flex;
+  padding: 1rem;
+  flex-direction: column;
+  align-items: center;
+  -webkit-margin-end: 0.5rem;
+          margin-inline-end: 0.5rem;
+}
+.campusLand-card-container {
+  display: flex;
+  align-items: end;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
+.campusLand-card__title {
+  margin-block: 1rem;
+}
+.campusLand-card__title * {
+  display: block;
+}
+.campusLand-card__img {
+  margin-block: 1rem;
+  width: 15rem;
+  min-height: 10.6875rem;
+}
+
+.campusLand-modal {
+  position: absolute;
+  height: auto;
+  width: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  padding: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+}
+.campusLand-modal__content {
+  height: auto;
+  padding: 2rem;
+  overflow: auto;
+}
+.campusLand-modal__footer {
+  padding: 2rem;
+}
+.campusLand-modal__table {
+  height: 40%;
+  width: -moz-fit-content;
+  width: fit-content;
+  min-width: 56rem;
+}
+.campusLand-modal__table-collumn, .campusLand-modal__table-cell {
+  padding-inline: 2rem;
+}
+.campusLand-modal__table-thead {
+  height: 4rem;
+}
+
+.campusLand-form {
+  width: min(100rem, 95vw);
+  position: relative;
+  padding: 1rem;
+}
+.campusLand-form__checkbox-link, .campusLand-form__add-link {
+  display: block;
+  padding: 1rem 2rem;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-inline: auto;
+}
+
+#campusLand-form__checkbox {
+  display: none;
+}
+#campusLand-form__checkbox:checked ~ .campusLand-modal {
+  display: flex;
+  animation: 0.5s ease-out 0s 1 fadeInAnimation;
+}
+
+/*----------  MEDIAS  ----------*/
+@media (min-width: 800px) {
+  .campusLand-container {
+    width: min(100rem, 80%);
+  }
+  .campusLand-card {
+    -webkit-margin-end: 1rem;
+            margin-inline-end: 1rem;
+    margin-bottom: 1rem;
+  }
+  .campusLand-card-container {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  /*=============================================
+  =            HEADER            =
+  =============================================*/
+  .campusLand-header__navbar {
+    display: flex;
+  }
+  .campusLand-header .campusLand-container {
+    justify-content: space-between;
+  }
+  .campusLand-header__form-checkbox-label {
+    display: none;
+  }
+  /*=====  End of HEADER  ======*/
+  /*=============================================
+  =            FOOTER                           =
+  =============================================*/
+  .campusLand-footer__logo {
+    position: absolute;
+  }
+  .campusLand-footer__contactos {
+    align-self: end;
+    margin: 0;
+    width: 60%;
+    padding-inline: 4rem;
+  }
+  /*=====  End of FOOTER  ======*/
+  /*=============================================
+  =            SOPORTE                          =
+  =============================================*/
+  .campusLand-soporte {
+    padding: 2rem 4rem;
+  }
+  .campusLand-soporte__mesage-answer {
+    padding-inline: 2rem;
+  }
+  /*=====  End of SOPORTE  ======*/
+}/*# sourceMappingURL=styles.css.map */

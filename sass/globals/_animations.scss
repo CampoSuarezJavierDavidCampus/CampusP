@@ -1,0 +1,40 @@
+
+/*----------  ANIMATIONS  ----------*/
+
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+     }
+}
+
+
+@keyframes space {
+    0% {
+        transform: translateY(.8rem);
+        transform: translateX(.5rem);
+    }
+
+    25%{
+        transform: translateX(-.5rem);
+        transform: translateY(-.8rem);
+        transform: rotate(2deg);
+    }
+
+    50%{
+        transform: translateX(.5rem);
+        transform: translateY(.8rem);        
+    }
+
+    80%{
+        transform: rotate(-2deg);
+    }
+
+    100% {
+        transform: translateY(0rem);
+        transform: translateX(0rem);
+     }
+}

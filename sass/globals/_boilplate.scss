@@ -1,0 +1,139 @@
+
+/*----------  GLOBALS  ----------*/
+
+
+*,*::after,*::before{
+    box-sizing: inherit;
+}
+ 
+body{
+    user-select: none;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-areas: 
+        "header header"
+        "main  main "
+        "main  main "                     
+        "footer  footer"
+    ;
+    width: 100vw;
+    overflow-x: hidden;
+    grid-template-rows: auto repeat(2, minmax( auto , 1fr)) auto;
+    margin: 0;    
+    min-height: 100vh;    
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    animation: 0.25s ease-out 0s 1 fadeInAnimation;    
+    background: var(--campusLand-white);
+    background: linear-gradient(0deg, var(--campusLand-white) 0%, var(--campusLand-blue-light) 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.campusLand-container{
+    width: 100%;
+    height: 100%;          
+    display: block;
+    margin-inline: auto;
+    position: relative;
+    &--primary{       
+        padding-block: 4rem; 
+        grid-area: main;        
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+
+.campusLand-card{
+    height: 23rem;
+    display: flex;
+    padding:1rem;    
+    flex-direction: column;
+    align-items: center;
+    margin-inline-end: .5rem;
+
+    &-container{         
+        display: flex;
+        align-items: end;
+        flex-wrap: nowrap;   
+        overflow-x: auto;             
+    }
+
+    &__title{
+        margin-block: 1rem;
+
+        & * {
+            display: block  ;
+        }
+    }
+    &__img{
+        margin-block: 1rem;
+        width: 15rem;
+        min-height: 10.6875rem;
+    }
+}
+
+.campusLand-modal{        
+    position: absolute;
+    height: auto;    
+    width: 100%;
+    top: 0;  
+    left: 0;   
+    bottom: 0;
+    padding: 1rem ;
+    display: none;
+    flex-direction: column;
+    
+    justify-content: center;
+
+    &__content{
+        height: auto;        
+        padding: 2rem;
+        overflow: auto;
+    }
+
+    &__footer{         
+        padding: 2rem;
+    } 
+
+    &__table{
+        height: 40%;
+        width: fit-content;
+        min-width: 56rem;
+        &-collumn, &-cell{
+            padding-inline: 2rem;
+        }
+        &-thead{
+            height: 4rem;            
+        }
+    }
+        
+} 
+
+
+.campusLand-form{              
+    width: min(100rem ,95vw);  
+    position: relative;
+    padding:1rem ;        
+    &__checkbox-link, &__add-link{
+        display: block;
+        padding:1rem 2rem;
+        width: fit-content;            
+        margin-inline:auto ;
+    }
+
+}
+
+#campusLand-form__checkbox{
+    display: none;
+    &:checked ~ .campusLand-modal{
+        display: flex;
+        animation: .5s ease-out 0s 1 fadeInAnimation;        
+    }
+}
+
+
+
+
+ 

@@ -1,0 +1,7 @@
+@mixin createVars($prefix,$map){
+    :root{
+        @each $propertieName, $value in $map {
+            --#{$prefix}-#{$propertieName}: #{$value};
+        }
+    }
+}

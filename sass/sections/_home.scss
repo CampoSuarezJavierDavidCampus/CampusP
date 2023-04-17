@@ -1,0 +1,26 @@
+/*=============================================
+=            HOME                             =
+=============================================*/
+
+.campusLand-home{
+    text-align: center;
+    &__bienvenida > *{
+        display: block;
+    }
+
+    &__description{
+        &-title{
+            margin-top: 1rem;
+            margin-bottom: 0;
+            padding: 0;
+        }
+
+        &-mesage{
+            margin-top: 0;
+        }
+    }
+     
+}
+
+/*=====  End of HOME  ======*/
+

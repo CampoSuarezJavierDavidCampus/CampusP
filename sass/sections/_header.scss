@@ -1,0 +1,68 @@
+@use "sass:math";
+
+.campusLand-header{
+    grid-area: header;      
+    width: 100vw;  
+    height: 5rem;    
+
+    .campusLand-container{
+        display: flex;  
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    #campusLand-header__form-checkbox{
+        display: none;
+    }
+
+    #campusLand-header__form-checkbox:checked ~&__offcanvas{
+        display: flex;
+    }
+
+    &__logo{
+        position: relative;        
+        width: 10rem;
+        height: 3.5rem;
+    }
+    &__navbar{                        
+        width: 40%;
+        display: none;
+        align-items: center;
+        justify-content: space-evenly; 
+        &-link{                        
+            padding: 1rem 3rem;
+        }                
+    }
+
+    &__form{        
+        &-checkbox-label{
+            padding:1rem;
+            &--exit{      
+                margin-bottom: 2rem;
+                align-self: self-start;          
+                &::after{
+                    content: 'Salir';
+                    
+                }
+            }
+        }        
+    }
+
+    &__offcanvas{
+        width: 100vw;        
+        height: 100vh;
+        z-index: 1080;
+        position: fixed;
+        left: 0;
+        top: 0;        
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        padding-inline: 1rem;           
+        .campusLand-header__navbar-link{ 
+            margin-block: .5rem;                       
+            width: 80%;
+        }                        
+    }
+    
+}

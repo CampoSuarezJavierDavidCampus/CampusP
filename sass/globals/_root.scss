@@ -1,0 +1,21 @@
+@use 'mixins' as *;
+
+$prefix: campusLand;
+$white :    rgb(255,255,255);
+$blue-light :     rgba(33, 26, 133, 0.838);
+$purple:    rgb(90, 94, 224);
+$purple-light: #9785ff9d;
+$black:    rgb(0,0,0);
+$light:     #f8f9fa;
+
+$colors: (
+    "white":            $white,
+    "blue-light":       $blue-light,
+    "purple":           $purple,
+    "purple-light":     $purple-light,
+    "black":            $black,
+    "light":            $light
+);
+
+@include createVars($prefix,$colors)
+

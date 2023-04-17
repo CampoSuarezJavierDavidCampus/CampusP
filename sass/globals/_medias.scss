@@ -1,0 +1,83 @@
+
+/*----------  MEDIAS  ----------*/
+
+
+
+@media (min-width: 800px) {    
+    .campusLand-container{
+        width: min(100rem ,80%);        
+    }
+    
+    .campusLand-card{
+        margin-inline-end: 1rem;
+        margin-bottom: 1rem;
+        &-container{        
+
+            justify-content: center;
+            flex-wrap: wrap;            
+        }
+    }
+    
+    /*=============================================
+    =            HEADER            =
+    =============================================*/
+    
+    .campusLand-header{
+        &__navbar{
+            display: flex;
+        }
+    
+        .campusLand-container{                        
+            justify-content: space-between;
+        }
+
+        &__form{
+            &-checkbox-label{
+                display: none;
+            }
+        }
+    }
+    
+    
+    /*=====  End of HEADER  ======*/
+    
+
+
+    
+    
+    /*=============================================
+    =            FOOTER                           =
+    =============================================*/
+    
+    .campusLand-footer{ 
+        &__logo{
+            position: absolute;
+        }
+        &__contactos{                   
+            align-self: end;  
+            margin: 0;
+            width: 60%;    
+            padding-inline: 4rem;                                   
+        }
+    }
+    
+    /*=====  End of FOOTER  ======*/
+    
+    /*=============================================
+    =            SOPORTE                          =
+    =============================================*/
+    
+    .campusLand-soporte{
+        padding: 2rem 4rem;
+    
+        &__mesage{
+            &-answer{
+                padding-inline: 2rem;
+            }
+        }
+    }
+    
+    /*=====  End of SOPORTE  ======*/
+    
+    
+}
